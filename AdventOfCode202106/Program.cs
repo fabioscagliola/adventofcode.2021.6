@@ -63,6 +63,8 @@ namespace com.fabioscagliola.AdventOfCode202106
                     }
 
                     this.AddRange(babyLanternfishList);
+
+                    Console.WriteLine($"[{DateTime.Now:s}] After day {i} there are {Count} lanternfish");
                 }
 
                 return Count;
@@ -77,7 +79,7 @@ namespace com.fabioscagliola.AdventOfCode202106
 
             LanternfishList lanternfishList = new LanternfishList(initialStateList);
 
-            Console.WriteLine($"After 80 days there would be {lanternfishList.CountAfterDays(80)} lanternfish");
+            Console.WriteLine($"After {Properties.Settings.Default.Days} days there would be {lanternfishList.CountAfterDays(Properties.Settings.Default.Days)} lanternfish");
         }
 
     }
